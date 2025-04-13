@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Custom cyber colors
+				'neon-green': 'hsl(var(--neon-green))',
+				'cyber-red': 'hsl(var(--cyber-red))',
+				'neon-blue': 'hsl(var(--neon-blue))',
+				'neon-purple': 'hsl(var(--neon-purple))',
+				'matrix-green': 'hsl(var(--matrix-green))',
+				'dark-bg': 'hsl(var(--dark-bg))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +82,58 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-neon': {
+					'0%, 100%': {
+						opacity: '1',
+						filter: 'brightness(1) blur(0px)'
+					},
+					'50%': {
+						opacity: '0.7',
+						filter: 'brightness(1.5) blur(3px)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'glitch': {
+					'0%, 100%': {
+						transform: 'translate(0)'
+					},
+					'20%': {
+						transform: 'translate(-5px, 5px)'
+					},
+					'40%': {
+						transform: 'translate(-5px, -5px)'
+					},
+					'60%': {
+						transform: 'translate(5px, 5px)'
+					},
+					'80%': {
+						transform: 'translate(5px, -5px)'
+					}
+				},
+				'scanline': {
+					'0%': {
+						transform: 'translateY(0%)'
+					},
+					'100%': {
+						transform: 'translateY(100%)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-neon': 'pulse-neon 2s infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'glitch': 'glitch 1s ease-in-out infinite',
+				'scanline': 'scanline 8s linear infinite'
 			}
 		}
 	},
